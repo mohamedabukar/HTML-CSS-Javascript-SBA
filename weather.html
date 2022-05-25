@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="style.css" />
+  <title>Weather</title>
+</head>
+
+<body class="flex-column min-100-vh">
+  <div>
+    <nav>
+        <ul class="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="weather.html">Weather Search</a></li>
+            <li><a href="stylepage.html">Style Page</a></li>
+        </ul>
+    </nav>
+</div>
+  <header class="hero">
+    <h1 class="app-title"> Weather Dashboard</h1>
+    <p>Search for a city and get the current Weather</p>
+  </header>
+
+
+  <main class="row">
+    <div class="col-5 col-md-4">
+
+      <div class="card">
+        <h3 class="card-header text-uppercase">Search for a city</h3>
+        <form id="user-form" class="card-body">
+          <input name="city" id="city-name" type="text" class="form-input"/>
+          <button type="button" class="searchBtn">Search</button>
+        </form>
+      </div>
+
+      <div class="row card">
+        <h3 class="card-header text-uppercase">Popular Cities</h3>
+        <div id="top-searches" class="card-body">
+          <button class="col-12 btn" id="city1" value="Los Angeles">Los Angeles</button>
+          <button class="col-12 btn" id="city2" value="New York">New York</button>
+          <button class="col-12 btn" id="city3" value="Miami">Miami</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-8">
+      <h2 class="city-nme"></h2>
+      <h3 class="date"></h3>
+      <p class="tempEl"></p>
+      <p class="humidityEl"></p>
+      <p class="windEl"></p>
+      <div id="city-container" class="list-group"></div>
+    </div>
+    <section class="Days table row">
+    </section>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
