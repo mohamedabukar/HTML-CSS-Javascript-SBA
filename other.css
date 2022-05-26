@@ -1,0 +1,19 @@
+.navlist{
+    display: flex;
+    justify-content: space-around;
+}
+.navlist li {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 30px;
+}
+.styleimages{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.colors{
+    width:250px;
+    height: 250px;
+    margin:20px;
+}
