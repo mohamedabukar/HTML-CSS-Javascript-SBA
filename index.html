@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Resultpage</title>
 </head>
+<!-- Internal css done for background color of page and other styling -->
+<style>
+    * {
+        background-color: rgb(230, 225, 225);
+    }
+
+    .user {
+        text-align: center;
+    }
+
+    .user h2 {
+        margin-top: 30px;
+    }
+</style>
+
 <body>
+    <!-- Navbar created to gain access to other pages -->
     <div class="welcome">
         <div class="destination">
             <h2>What page would you like to go to?</h2>
@@ -22,17 +39,42 @@
                 </ul>
             </nav>
         </div>
+        <!-- User data displayed on page after input through forms -->
         <div class="user">
             <h1 class="userwelcome">Welcome <span class="spanwelcome"></span></h1>
-            <h2>What is your name?</h2>
+            <img class="smopic"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6A2uPoIft1gvtqS4DBeyqqAE7cR84ViUgCw&usqp=CAU"
+                style="border-radius: 10%;margin-top: 20px;" width="180px" height="120px" alt="pic">
+            <h2>Input data to fill in table below</h2>
             <form class="indexform" id="uname">
                 <label for="fname">Name</label>
                 <input type="text" id="username" name="fname"><br>
             </form>
+            <form class="indexform" id="ufood">
+                <label for="fFood">Food</label>
+                <input type="text" id="userFood" Food="fname"><br>
+            </form>
+            <form class="indexform" id="usport">
+                <label for="fSport">Sport</label>
+                <input type="text" id="userSport" name="fSport"><br>
+            </form>
         </div>
-        
-        
+        <!-- User data displayed on table -->
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Favorite food</th>
+                <th>Favorite sport</th>
+            </tr>
+            <tr>
+                <td id="tname"></td>
+                <td id="tfood"></td>
+                <td id="tsport"></td>
+            </tr>
+        </table>
+
     </div>
 </body>
-<script src="/js/index.js"></script>
+<script src="index.js"></script>
+
 </html>

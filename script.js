@@ -1,7 +1,9 @@
 const userSearch = localStorage.getItem("search")
 
-const apiKey = "5d1b3f150d64e1e1cd5a4bedbf160469"
+const apiKey = "5d1b3f150d64e1e1cd5a4bedbf160469";
 
+
+//function storeInput was made so that the api could be used with the input of the user to get the desired city
 function storeInput(cityName) {
     const apiUrlcitySearch = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + apiKey;
     fetch(apiUrlcitySearch)
@@ -23,11 +25,13 @@ function storeInput(cityName) {
         })
 
 }
+//event listener is so the user input can be ran into the storeinput function
 $(".btn").on("click", function (event) {
     var cityName = event.target.value;
     storeInput(cityName);
 })
 
+//this function is for the display of the next five days of weather in the city the user inputed
 function fiveDay(lat, lon) {
     var fiveDayUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey;
     fetch(fiveDayUrl)
@@ -54,6 +58,8 @@ function fiveDay(lat, lon) {
 
 }
 
+
+//event listener is for getting popular cities data
 $(".searchBtn").on("click", function () {
     let x = $("#city-name").val()
     storeInput(x);
