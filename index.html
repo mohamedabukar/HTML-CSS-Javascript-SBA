@@ -7,31 +7,32 @@
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Resultpage</title>
 </head>
 <body>
     <div class="welcome">
-        <div class="user">
-            <h1>Welcome</h1>
-            <h2>What is your name?</h2>
-            <form class="indexform">
-                <label for="fname">Name</label>
-                <input type="text" id="username" name="fname"><br>
-            </form>
-        </div>
         <div class="destination">
             <h2>What page would you like to go to?</h2>
             <nav>
                 <ul class="navlist">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="weather.html">Weather Search</a></li>
                     <li><a href="stylepage.html">Style Page</a></li>
                 </ul>
             </nav>
         </div>
+        <div class="user">
+            <h1 class="userwelcome">Welcome <span class="spanwelcome"></span></h1>
+            <h2>What is your name?</h2>
+            <form class="indexform" id="uname">
+                <label for="fname">Name</label>
+                <input type="text" id="username" name="fname"><br>
+            </form>
+        </div>
+        
         
     </div>
 </body>
-<script src="script.js"></script>
+<script src="/js/index.js"></script>
 </html>
